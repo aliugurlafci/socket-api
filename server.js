@@ -7,9 +7,7 @@ const app = express();
 const server = createServer(app);
 const io = new Server(server);
 
-/*app.get('/', (req, res) => {
-  res.sendFile(join(__dirname, 'index.html'));
-});*/
+
 io.on('connection', (socket) => {
     console.log('a user connected');
 
@@ -35,5 +33,4 @@ io.on('connection', (socket) => {
 });
 
 server.listen(9999, () => {
-  console.log('server running at http://localhost:3000');
 });
